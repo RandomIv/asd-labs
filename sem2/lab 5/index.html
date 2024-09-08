@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body{
+                box-sizing: border-box;
+                font-family: Comic Sans MS, serif;
+            }
+            header{
+                text-align: center;
+                font-weight: bold
+            }
+            .button{
+                position: relative;
+                width:100%;
+                height:15%;
+                font-size: 25px;
+                color: black;
+                border: solid black;
+                border-radius: 10px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .buttons{
+                position: absolute;
+                width: 10%;
+                height:60%;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                top: 20%;
+                left: 5%;
+            }
+            .button:hover{
+                cursor: pointer;
+                color: white;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header id = "header">Press "1" to draw directed graph, press "2" to draw undirected graph. You can see all data in the console. Press Shift + CTRL + J to go there.</header>
+        <canvas id="canvas"></canvas>
+        <div class="buttons">
+            <div class="button" id="dfs">DFS</div>
+            <div class="button" id="bfs">BFS</div>
+            <div class="button" id="next-step">NEXT STEP</div>
+        </div>
+
+        <script type="module" src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    </body>
+</html>
